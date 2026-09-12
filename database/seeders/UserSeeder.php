@@ -1,0 +1,48 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\User;
+use Illuminate\Database\Seeder;
+
+class UserSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        // 1. create a super admin
+        $superAdmin = User::updateOrCreate([
+            'name' => 'Super Admin',
+            'email' => 'superadmin@example.com',
+            'password' => bcrypt('password'),
+        ]);
+        $superAdmin->syncRoles('Super Admin');
+
+        // 2. create a admin unit
+        $adminUnit = User::updateOrCreate([
+            'name' => 'Admin Unit',
+            'email' => 'adminunit@example.com',
+            'password' => bcrypt('password'),
+            'unit_id' => 1,
+        ]);
+        $adminUnit->syncRoles('Admin Unit');
+
+        // 3. create a staff unit
+        $staffUnit = User::updateOrCreate([
+            'name' => 'Staff Unit',
+            'email' => 'staffunit@example.com',
+            'password' => bcrypt('password'),
+            'unit_id' => 1,
+        ]);
+        $staffUnit->syncRoles('Staff Unit');
+
+        // 4. create a user
+        $staffUnit = User::updateOrCreate([
+            'name' => 'User',
+            'email' => 'user@example.com',
+            'password' => bcrypt('password'),
+        ]);
+    }
+}

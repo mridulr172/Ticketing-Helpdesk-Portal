@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Filament\Resources\TicketResource\Pages;
+
+use App\Filament\Resources\TicketResource;
+use Filament\Resources\Pages\CreateRecord;
+
+class CreateTicket extends CreateRecord
+{
+    protected static string $resource = TicketResource::class;
+
+    public function getTitle(): string
+    {
+        return __('Open Ticket');
+    }
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['owner_id'] = auth()->id();
+        $data['ticket_statuses_id'] = 1;
+
+        return $data;
+    }
+}
