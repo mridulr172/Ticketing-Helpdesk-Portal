@@ -62,7 +62,7 @@ Authorization: Spatie Roles & Permissions
 
 Charts: Filament Apex Charts / ApexCharts
 
-Activity Logging: Activity Log
+****Activity Logging: Activity Log
 
 Notifications: Laravel Notifications with email and Filament database notifications
 
@@ -81,6 +81,46 @@ Database Design
 Unified Modeling Language (UML)
 
 <img src="screenshot/uml.png" width="100%" alt="UML Diagram">
+
+<hr/>
+
+🛠️ Technology Stack
+
+Technology
+
+Usage
+
+Laravel 12
+
+Backend application framework
+
+Filament 3
+
+Admin panel and resource management
+
+PHP
+
+Application development
+
+MySQL
+
+Relational database
+
+Spatie Permissions
+
+Role and permission management
+
+ApexCharts
+
+Dashboard charts and statistics
+
+Activity Log
+
+Tracking system and user activities
+
+Blade
+
+Server-side application views
 
 <hr/>
 
